@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 ) 
 
 func main(){
@@ -41,10 +42,16 @@ func main(){
 		fmt.Printf("Slice type : %T\n", bookings)
 		fmt.Printf("Length slice : %v\n", len(bookings))
 
-
+		fmt.Printf("%v tickets remaining\n", remainingTickets)
 
 		fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName,lastName, userTickets, email)
-		fmt.Printf("%v tickets remaining\n", remainingTickets)
+		
+		firstNames := []string{}
+		for index, booking := range bookings{
+			var names = strings.Fields(booking)
+			firstNames = append(firstNames, names[0])
+		}
+
 	}
 
 }
