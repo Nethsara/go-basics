@@ -1,6 +1,8 @@
 package main
 
-import "fmt" 
+import (
+	"fmt"
+) 
 
 func main(){
 	conferenceName  := "Go Conferene"
@@ -11,10 +13,14 @@ func main(){
 	fmt.Printf("We have total of %v, We have available %v \n", conferenceTickets, remainingTickets)
 	fmt.Println("Here you can start booking")
 
+	var booking = [50]string{"Nethsara", "Siyum"}
+	var bookings [50]string
+
 	var firstName string
 	var lastName string
 	var email string
 	var userTickets uint
+	
 	fmt.Print("What is your first name : ")
 	fmt.Scan(&firstName)
 
