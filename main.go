@@ -13,7 +13,6 @@ func main(){
 	fmt.Printf("We have total of %v, We have available %v \n", conferenceTickets, remainingTickets)
 	fmt.Println("Here you can start booking")
 
-	var booking = [50]string{"Nethsara", "Siyum"}
 	var bookings [50]string
 
 	var firstName string
@@ -34,6 +33,14 @@ func main(){
 	fmt.Scan(&userTickets)
 
 	remainingTickets -= userTickets
+	bookings[0] = firstName + " " + lastName 
+
+	fmt.Printf("Whole array : %v", bookings)
+	fmt.Printf("Whole array : %v", bookings[0])
+	fmt.Printf("Whole array : %T", bookings)
+	fmt.Printf("Whole array : %v", len(bookings))
+
+
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName,lastName, userTickets, email)
 	fmt.Printf("%v tickets remaining\n", remainingTickets)
